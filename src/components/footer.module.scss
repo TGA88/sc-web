@@ -1,0 +1,133 @@
+.container{
+    min-width: 100%;
+    min-height: 238px;
+    padding: 2rem 1rem 1.125rem 1rem;
+    background: #666666 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+}
+
+.containerLink{
+    display: flex;
+   font-family: 'eq_headlineregular';
+   font-size: 14px;
+   a{
+    color: #FFFFFF;
+text-decoration: none;
+   }
+
+   .rowLink{
+       margin-bottom: 0.5rem;
+   }
+   .colLink{
+       padding: 0;
+   }
+   .right{
+    margin-left: 1rem;
+    }
+    .logo{
+        width: 100%;
+             margin-right: 1rem;
+    }
+}
+
+
+
+
+.textBold{
+    font-family: 'eq_headlinebold';
+    font-size: 14px;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+  
+.iconContainer{
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0 1.5rem 0;
+
+
+}
+   .item{
+       margin: 0 1rem;
+   }
+
+   .copyright{
+    color:#CCCCCC;
+    text-align: center;
+}
+  
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)  {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)   {
+    .container{
+     padding-left: 2rem;
+     padding-right: 2rem;
+  }
+
+  .containerLink{
+    .right{
+        margin-left: 4.5rem;
+        }
+
+        .logo{
+            width: 100%;
+            margin-right: 2rem;
+            // height: 2rem;
+        }
+  }
+
+  .social{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  
+ 
+//  margin: 1.25rem 0 1.5rem 0;
+
+.iconContainer{
+    display: flex;
+    justify-content: unset;
+    margin: 1.5rem 0 1.5rem 0;
+
+
+}
+   .item{
+       margin: 0 1rem;
+   }
+
+   .copyright{
+    color:#CCCCCC;
+    text-align:unset;
+    margin: 1.5rem 0 1.5rem 0;
+}
+  
+}
+ 
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)  {  
+    .container{
+        padding-left: 16.25rem;
+        padding-right: 16.25rem;
+     }
+     .containerLink{   
+        .logo{
+            width: 100%;
+            margin-right: 7rem;
+        }
+      }
+    
+}
