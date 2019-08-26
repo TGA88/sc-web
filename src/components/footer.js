@@ -17,13 +17,13 @@ const Footer = ({ siteTitle }) => (
         <div className={`row ${styles.rowLink}`}>
           <Link
             to="/"
-            className={`col-6 col-sm-3 col-md-4 col-xl-3 ${styles.colLink} ${styles.textBold}`}
+            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink} ${styles.textBold}`}
           >
             ABOUT US
           </Link>
           <Link
             to="/"
-            className={`col-6 col-sm-3 col-md-4 col-xl-3 ${styles.colLink} ${styles.textBold}`}
+            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink} ${styles.textBold}`}
           >
             QUICK LINKS
           </Link>
@@ -31,13 +31,13 @@ const Footer = ({ siteTitle }) => (
         <div className={`row ${styles.rowLink}`}>
           <Link
             to="/"
-            className={`col-6 col-sm-3 col-md-4 col-xl-3 ${styles.colLink}`}
+            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
           >
             Our Company
           </Link>
           <Link
             to="/"
-            className={`col-6 col-sm-3 col-md-4 col-xl-3 ${styles.colLink}`}
+            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
           >
             Official Website
           </Link>
@@ -45,7 +45,7 @@ const Footer = ({ siteTitle }) => (
         <div className={`row ${styles.rowLink}`}>
           <Link
             to="/"
-            className={`col-6 col-sm-3 col-md-4 col-xl-3 ${styles.colLink}`}
+            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
           >
             Newsroom
           </Link>
@@ -58,27 +58,27 @@ const Footer = ({ siteTitle }) => (
       <div className={styles.iconContainer}>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/icon - Social - Facebook-1.svg"
+          src={`/Asset/m_teaser/Icon-Facebook-1.svg`}
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/icon - Social - Instagram-1.svg"
+          src="/Asset/m_teaser/Icon-Instagram-1.svg"
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/icon - Social - YouTube-1.svg"
+          src="/Asset/m_teaser/Icon-YouTube-1.svg"
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/icon - Social - Twitter-1.svg"
+          src="/Asset/m_teaser/Icon-Twitter-1.svg"
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/icon - Social - Pinterest.svg"
+          src="/Asset/m_teaser/Icon-Pinterest.svg"
           alt="FB"
         ></img>
       </div>

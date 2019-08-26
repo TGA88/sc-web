@@ -124,10 +124,17 @@ text-decoration: none;
         padding-right: 16.25rem;
      }
      .containerLink{   
+        font-family: 'eq_headlineregular';
+        font-size: 20px;
         .logo{
             width: 100%;
             margin-right: 7rem;
         }
       }
+
+      .textBold{
+        font-family: 'eq_headlinebold';
+        font-size: 20px;
+    }
     
 }
