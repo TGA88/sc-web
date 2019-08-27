@@ -1,0 +1,86 @@
+$d_bg1 : "/Asset/d_teaser/Egg Red Background.png";
+$t_bg1 : "/Asset/t_teaser/Egg Red Background.png";
+$m_bg1 : "/Asset/m_teaser/Egg Red Background.png";
+
+$d_bg2 : "/Asset/d_teaser/Egg Green Background.png";
+$t_bg2 : "/Asset/t_teaser/Egg Green Background.png";
+$m_bg2 : "/Asset/m_teaser/Egg Green Background.png";
+
+$d_bg3 : "/Asset/d_teaser/Egg Yellow Background.png";
+$t_bg3 : "/Asset/t_teaser/Egg Yellow Background.png";
+$m_bg3 : "/Asset/m_teaser/Egg Yellow Background.png";
+
+$d_bg4 : "/Asset/d_teaser/Egg Pink Background.png";
+$t_bg4 : "/Asset/t_teaser/Egg Pink Background.png";
+$m_bg4 : "/Asset/m_teaser/Egg Pink Background.png";
+
+$d_bg5 : "/Asset/d_teaser/Egg Blue Background.png";
+$t_bg5 : "/Asset/t_teaser/Egg Blue Background.png";
+$m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
+
+.container{
+   width: 100%;
+      margin: 0;
+      padding: 2.5rem 1rem 2.25rem 1rem;
+      min-height: -webkit-fill-available;
+    
+     
+}
+
+.bg1{
+  background-image: url($m_bg1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg2{
+  background-image: url($m_bg2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.bg3{
+  background-image: url($m_bg3);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg4{
+  background-image: url($m_bg4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg5{
+  background-image: url($m_bg5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)   {
+  .bg1{
+    background-image: url($t_bg1);
+  }
+  
+  .bg2{
+    background-image: url($t_bg2);
+  }
+}
+
+@media (min-width: 992px)  { 
+
+  .bg1{
+    background-image: url($d_bg1);
+  }
+  
+  .bg2{
+    background-image: url($d_bg2);
+  }
+}

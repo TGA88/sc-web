@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import { relative } from "path";
+import MainContent from './main-content';
 import Footer from "./footer";
 import styles from './layout.module.scss';
 // import "./layout.css"
@@ -29,9 +29,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-  
+
+    <div className={styles.container}>
+ 
+   
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+      {/* <div
         style={{
           margin: `0 auto`,
           maxWidth: '100%',
@@ -41,11 +44,14 @@ const Layout = ({ children }) => {
       >
        <div className={styles.content}> <main style={{position:"relative"}}>{children}</main>
        </div>
-       
-     
-      
-       <Footer></Footer>
+      </div> */}
+      <MainContent>
+        {children}
+        <Footer></Footer>
+      </MainContent>
+
       </div>
+     
     </>
   )
 }
