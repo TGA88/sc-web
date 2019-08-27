@@ -53,11 +53,13 @@ text-decoration: none;
 }
    .item{
        margin: 0 1rem;
+       height: 15px;
    }
 
    .copyright{
     color:#CCCCCC;
     text-align: center;
+    font-size: 12px;
 }
   
 }
@@ -92,6 +94,7 @@ text-decoration: none;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: baseline;
   
  
 //  margin: 1.25rem 0 1.5rem 0;
@@ -105,11 +108,13 @@ text-decoration: none;
 }
    .item{
        margin: 0 1rem;
+       height: 17px;
    }
 
    .copyright{
     color:#CCCCCC;
     text-align:unset;
+    font-size: 16px;
     margin: 1.5rem 0 1.5rem 0;
 }
   
@@ -135,6 +140,13 @@ text-decoration: none;
       .textBold{
         font-family: 'eq_headlinebold';
         font-size: 20px;
+    }
+
+    .social{
+        .item{
+            margin: 0 1rem;
+            height: 23px;
+        }
     }
     
 }
