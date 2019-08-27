@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
   <header className={`${styles.container} ${styles.shadow}`}>
     <Link to="/page-2">
       <img
-        className={styles.logoRight}
+        className={styles.logoLeft}
         src={`/Asset/m_teaser/Logo - Homes for All Birds.svg`}
         alt="logo"
       />
@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
 
     <Link to="/">
       <img
-        className={styles.logoLeft}
+        className={styles.logoRight}
         src={`/Asset/m_teaser/Logo - SC Asset.svg`}
         alt="scassect"
       />

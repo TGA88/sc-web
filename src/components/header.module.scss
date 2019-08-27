@@ -1,15 +1,10 @@
-// .header{
-//     // background-color: white;
-//     // margin-bottom : "1.45rem";
-//     box-shadow: 0px 2px 6px #000000;
-//     opacity: 1;
-// }
 
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
+    padding: 0 1rem;
 }
 
 .shadow{
@@ -18,9 +13,37 @@
 }
 
 .logoRight{
-    height: 14px;
+    height: 15px;
 }
 
 .logoLeft{
-height: 15px;;
+height: 14px;;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)   {
+    .container{
+        padding: 0 2rem;
+    }
+    .logoRight{
+        height: 18px;
+    }
+    
+    .logoLeft{
+    height: 15px;
+    }
+}
+
+@media (min-width: 992px)  { 
+    .container{
+        padding: 0 13.5rem;
+        height: 80px;
+    } 
+    .logoRight{
+        height: 30px;
+    }
+    
+    .logoLeft{
+    height: 30px;
+    }
 }
