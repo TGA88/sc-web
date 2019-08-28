@@ -1,35 +1,49 @@
 import React from 'react';
-import Plyr from 'plyr';
+import PropTypes  from 'prop-types';
 
-export default class AudioPlayer extends React.Component{
+export default class AudioPlayer extends React.Component {
+                 static childContextTypes = {
+                   selectedTrackId: PropTypes.string.isRequired,
+                   trackState: PropTypes.bool,
+                   onTrackChanged: PropTypes.func.isRequired,
+                   onTrackStateChanged: PropTypes.func.isRequired,
+                 }
+                 getChildContext = () => {
+                   return {
+                     selectedTrackId: this.state.selectedTrackId,
+                     trackState: this.state.trackState,
+                     onTrackChanged: this.onTrackChanged.bind(this),
+                     onTrackStateChanged: this.onTrackStateChanged.bind(this),
+                   }
+                 }
 
-   constructor(props){
-       super(props);
-   }
+                 constructor(props) {
+                    super(props)
+                    this.onTrackChanged.bind(this);
+                    this.onTrackStateChanged.bind(this);
+                  }
 
-   componentDidMount(){
-    this.audioPlyr  = new Plyr("#audio1",{controls,autoplay:true});
-    this.audio1.on('play', () => {
-        // if (this.audio2.playing) {
-        //     this.audio2.destroy();
-        //     this.audio2 =new Plyr("#audio2");
-        // }
-       
-        //    this.audio3.restart();
-        //    this.audio3.togglePlay(false);
-          });
-   }
+                 onTrackChanged(trackId) {
+                    this.setState({ selectedTrackId: trackId, trackState: true },()=> this.props.onStateChanged(this.state))
+                   
+                 }
 
-   componentWillUnmount(){
-    this.audioPlyr &&  this.audioPlyr.destroy();
+                 onTrackStateChanged(newValue) {
+                     console.log(`in onTrackStateChanged : ${newValue} `)
+                     this.setState({trackState:newValue});
+                 }
 
-   }
-   render(){
-       const {oid, audSrc,audType } = this.props;   
-       return (
-        <audio id={oid} controls>
-        <source src={audSrc} type={audType} />
-    </audio>
-       );
-   }
-}
+                 state = {
+                   selectedTrackId: this.props.selectedTrackId,
+                   trackState: this.props.trackState,
+                 }
+               
+
+                 render() {
+                   return <>{this.props.children}</>
+                 }
+               }
+
+AudioPlayer.propTypes ={
+    onStateChanged:PropTypes.func
+    }

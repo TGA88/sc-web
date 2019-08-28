@@ -72,6 +72,18 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
   .bg2{
     background-image: url($t_bg2);
   }
+
+  .bg3{
+    background-image: url($t_bg3);
+  }
+
+  .bg4{
+    background-image: url($t_bg4);
+  }
+
+  .bg5{
+    background-image: url($t_bg5);
+  }
 }
 
 @media (min-width: 992px)  { 
@@ -82,5 +94,17 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
   
   .bg2{
     background-image: url($d_bg2);
+  }
+
+  .bg3{
+    background-image: url($d_bg3);
+  }
+
+  .bg4{
+    background-image: url($d_bg4);
+  }
+
+  .bg5{
+    background-image: url($d_bg5);
   }
 }

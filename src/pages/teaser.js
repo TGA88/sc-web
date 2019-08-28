@@ -5,6 +5,11 @@ import classNames from "classnames"
 
 import styles from "./teaser.module.scss"
 
+import ScAudioTrack from '../components/audios/track';
+
+import ScAudioPlayer from '../components/audios/player';
+
+const SourcePath = "/Asset/audio/";
 export default class AudioPage extends Component {
   componentDidMount() {}
 
@@ -12,46 +17,65 @@ export default class AudioPage extends Component {
 
   state = {
     bgImgPath: "/Asset/m_teaser/Egg Red Background.png",
-    selectedIdx: 0,
+    selectedBackgroundTrackId: 'play1',
+  }
+
+  handleAudioPlayerStateChanged(playerState){
+  console.log('`AudioPlayer StateChange');
+  console.log(playerState);
+  this.setState({selectedBackgroundTrackId:playerState.selectedTrackId})
   }
   render() {
     let containerCss = classNames(
       styles.container,
-      { [styles.bg1]: this.state.selectedIdx === 0 },
-      { [styles.bg2]: this.state.selectedIdx === 1 },
-      { [styles.bg3]: this.state.selectedIdx === 3 },
-      { [styles.bg4]: this.state.selectedIdx === 4 },
-      { [styles.bg5]: this.state.selectedIdx === 5 }
+      { [styles.bg1]: this.state.selectedBackgroundTrackId === 'play1' },
+      { [styles.bg2]: this.state.selectedBackgroundTrackId === 'play2' },
+      { [styles.bg3]: this.state.selectedBackgroundTrackId === 'play3' },
+      { [styles.bg4]: this.state.selectedBackgroundTrackId === 'play4' },
+      { [styles.bg5]: this.state.selectedBackgroundTrackId === 'play5' }
     )
     return (
       <Layout>
         <div className={`${containerCss}`}>
           <h1>Hi from the teser page</h1>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
-          <p>Welcome to teser page</p>
+          <ScAudioPlayer selectedTrackId={"play1"} trackState={true} onStateChanged={(e)=>this.handleAudioPlayerStateChanged(e)}>
+            <ScAudioTrack
+              TrackId="play1"
+              CoverImg={"/Asset/d_teaser/Egg Red.png"}
+              Artist={"Bird Thongchai"}
+              Song={"สบาย สบาย"}
+              Source={[{ src: `${SourcePath}สบาย สบาย.mp3`, type: "audio/mp3" },{ src: `${SourcePath}สบาย สบาย.ogg`, type: "audio/ogg" }]}
+            ></ScAudioTrack>
+            <ScAudioTrack
+              TrackId="play2"
+              CoverImg={"/Asset/d_teaser/Egg Green.png"}
+              Artist={"Bird Thongchai"}
+              Song={"คนไม่มีแฟน"}
+              Source={[{ src: `${SourcePath}คนไม่มีแฟน.mp3`, type: "audio/mp3" },{ src: `${SourcePath}คนไม่มีแฟน.ogg`, type: "audio/ogg" }]}
+            ></ScAudioTrack>
+             <ScAudioTrack
+              TrackId="play3"
+              CoverImg={"/Asset/d_teaser/Egg Yellow.png"}
+              Artist={"Bird Thongchai"}
+              Song={"ซ่อมได้"}
+              Source={[{ src: `${SourcePath}ซ่อมได้.mp3`, type: "audio/mp3" },{ src: `${SourcePath}ซ่อมได้.mp3`, type: "audio/ogg" }]}
+            ></ScAudioTrack>
+             <ScAudioTrack
+              TrackId="play4"
+              CoverImg={"/Asset/d_teaser/Egg Pink.png"}
+              Artist={"Bird Thongchai"}
+              Song={"เล่าสู่กันฟัง"}
+              Source={[{ src: `${SourcePath}เล่าสู่กันฟัง.mp3`, type: "audio/mp3" },{ src: `${SourcePath}.เล่าสู่กันฟัง`, type: "audio/ogg" }]}
+            ></ScAudioTrack>
 
-           <p>Welcome to teser page</p>
+             <ScAudioTrack
+              TrackId="play5"
+              CoverImg={"/Asset/d_teaser/Egg Blue.png"}
+              Artist={"Bird Thongchai"}
+              Song={"หมั่นคอยดูแลและรักษาดวงใจ"}
+              Source={[{ src: `${SourcePath}หมั่นคอยดูแลและรักษาดวงใจ.mp3`, type: "audio/mp3" },{ src: `${SourcePath}หมั่นคอยดูแลและรักษาดวงใจ.ogg`, type: "audio/ogg" }]}
+            ></ScAudioTrack>
+          </ScAudioPlayer>
         </div>
       </Layout>
     )
