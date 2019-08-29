@@ -59,11 +59,18 @@ export default class AudioTrack extends React.Component {
                      this.refs.reactPlayer.getInternalPlayer().currentTime=0;
                      this.context.onTrackChanged(this.props.TrackId)
                    } else {
-                     const nTrackState = !this.context.trackState
+                     const nTrackState = !this.context.trackState;
                      console.log(`fire onTrackStateChanged:${nTrackState}`)
                      this.context.onTrackStateChanged(nTrackState)
                    }
                  }
+
+                 onTrackEnded(){
+                  this.refs.reactPlayer.getInternalPlayer().currentTime=0;
+                  const nTrackState = !this.context.trackState;
+                  this.context.onTrackStateChanged(nTrackState);
+                 }
+                 
                  isSelected(selectedTrackId, trackId) {
                    return selectedTrackId === trackId
                  }
@@ -116,6 +123,7 @@ export default class AudioTrack extends React.Component {
                            },
                          }}
                          style={{ display: "none" }}
+                         onEnded={this.onTrackEnded.bind(this)}
                        />
                      </div>
                    )
