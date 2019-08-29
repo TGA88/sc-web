@@ -2,21 +2,21 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import classNames from "classnames"
 
-import styles from "./teaser.module.scss"
+import styles from "./index.module.scss"
 
 import ScAudioTrack from '../components/audios/track';
 
 import ScAudioPlayer from '../components/audios/player';
 
-const SourcePath = "/Asset/audio/";
+const SourcePath = `${process.env.ASSET_PATH}audio/`;
 export default class Teaser extends Component {
   componentDidMount() {}
 
   componentWillUnmount() {}
 
   state = {
-    bgImgPath: "/Asset/m_teaser/Egg Red Background.png",
-    bannerImage:"/Asset/d_teaser/Egg Red CD.png",
+    bgImgPath: `${process.env.ASSET_PATH}m_teaser/Egg Red Background.png`,
+    bannerImage:`${process.env.ASSET_PATH}d_teaser/Egg Red CD.png`,
     selectedBackgroundTrackId: 'play1',
   }
 
@@ -36,6 +36,12 @@ export default class Teaser extends Component {
       { [styles.bg4]: this.state.selectedBackgroundTrackId === 'play4' },
       { [styles.bg5]: this.state.selectedBackgroundTrackId === 'play5' }
     )
+
+    console.log(`env is :${process.env.NODE_ENV}`);
+
+    console.log(`project env is : `)
+    console.log(process.env.GATSBY_ASSET_PATH);
+    console.log(process.env.ASSET_PATH);
     return (
       <Layout>
         <div className={`${containerCss}`}>
@@ -68,22 +74,22 @@ export default class Teaser extends Component {
                   <div className={styles.bannerCardFooterIcons}>
                     <img
                       className={styles.item}
-                      src={`/Asset/m_teaser/Icon - Social - Facebook.svg`}
+                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Facebook.svg`}
                       alt="FB"
                     ></img>
                     <img
                       className={styles.item}
-                      src="/Asset/m_teaser/Icon - Social - Instagram.svg"
+                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Instagram.svg`}
                       alt="FB"
                     ></img>
                     <img
                       className={styles.item}
-                      src="/Asset/m_teaser/Icon - Social - YouTube.svg"
+                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - YouTube.svg`}
                       alt="FB"
                     ></img>
                     <img
                       className={styles.item}
-                      src="/Asset/m_teaser/Icon - Social - Twitter.svg"
+                      src={`${process.env.ASSET_PATH}Asset/m_teaser/Icon - Social - Twitter.svg`}
                       alt="FB"
                     ></img>
                     
@@ -101,52 +107,52 @@ export default class Teaser extends Component {
             >
               <ScAudioTrack
                 TrackId="play1"
-                CoverImg={"/Asset/d_teaser/Egg Red.png"}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Red.png"`}
                 Artist={"Bird Thongchai"}
                 Song={"สบาย สบาย"}
                 Source={[
                   { src: `${SourcePath}สบาย สบาย.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}สบาย สบาย.ogg`, type: "audio/ogg" },
                 ]}
-                TrackBanner="/Asset/d_teaser/Egg Red CD.png"
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Red CD.png`}
               ></ScAudioTrack>
               <ScAudioTrack
                 TrackId="play2"
-                CoverImg={"/Asset/d_teaser/Egg Green.png"}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Green.png`}
                 Artist={"Bird Thongchai"}
                 Song={"คนไม่มีแฟน"}
                 Source={[
                   { src: `${SourcePath}คนไม่มีแฟน.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}คนไม่มีแฟน.ogg`, type: "audio/ogg" },
                 ]}
-                TrackBanner="/Asset/d_teaser/Egg Green CD.png"
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Green CD.png`}
               ></ScAudioTrack>
               <ScAudioTrack
                 TrackId="play3"
-                CoverImg={"/Asset/d_teaser/Egg Yellow.png"}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Yellow.png`}
                 Artist={"Bird Thongchai"}
                 Song={"ซ่อมได้"}
                 Source={[
                   { src: `${SourcePath}ซ่อมได้.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}ซ่อมได้.mp3`, type: "audio/ogg" },
                 ]}
-                TrackBanner="/Asset/d_teaser/Egg Yellow CD.png"
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Yellow CD.png`}
               ></ScAudioTrack>
               <ScAudioTrack
                 TrackId="play4"
-                CoverImg={"/Asset/d_teaser/Egg Pink.png"}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Pink.png`}
                 Artist={"Bird Thongchai"}
                 Song={"เล่าสู่กันฟัง"}
                 Source={[
                   { src: `${SourcePath}เล่าสู่กันฟัง.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}.เล่าสู่กันฟัง`, type: "audio/ogg" },
                 ]}
-                TrackBanner="/Asset/d_teaser/Egg Pink CD.png"
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Pink CD.png`}
               ></ScAudioTrack>
 
               <ScAudioTrack
                 TrackId="play5"
-                CoverImg={"/Asset/d_teaser/Egg Blue.png"}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Blue.png`}
                 Artist={"Bird Thongchai"}
                 Song={"หมั่นคอยดูแลและรักษาดวงใจ"}
                 Source={[
@@ -159,7 +165,7 @@ export default class Teaser extends Component {
                     type: "audio/ogg",
                   },
                 ]}
-                TrackBanner="/Asset/d_teaser/Egg Blue CD.png"
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Blue CD.png`}
               ></ScAudioTrack>
             </ScAudioPlayer>
           </div>

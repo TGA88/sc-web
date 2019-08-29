@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
     <Link to="/page-2">
       <img
         className={styles.logoLeft}
-        src={`/Asset/m_teaser/Logo - Homes for All Birds.svg`}
+        src={`${process.env.ASSET_PATH}m_teaser/Logo - Homes for All Birds.svg`}
         alt="logo"
       />
     </Link>
@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
     <Link to="/">
       <img
         className={styles.logoRight}
-        src={`/Asset/m_teaser/Logo - SC Asset.svg`}
+        src={`${process.env.ASSET_PATH}m_teaser/Logo - SC Asset.svg`}
         alt="scassect"
       />
     </Link>

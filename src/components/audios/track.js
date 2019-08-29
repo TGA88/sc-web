@@ -15,8 +15,8 @@ export default class AudioTrack extends React.Component {
                    onTrackStateChanged: PropTypes.func.isRequired,
                  }
 
-                 playPath = "/Asset/d_teaser/Icon - Play.svg"
-                 pausePath = "/Asset/d_teaser/Icon - Pause.svg"
+                 playPath = `${process.env.ASSET_PATH}d_teaser/Icon - Play.svg`;
+                 pausePath = `${process.env.ASSET_PATH}d_teaser/Icon - Pause.svg`
 
                  constructor(props) {
                    super(props)

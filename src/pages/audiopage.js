@@ -62,7 +62,7 @@ return (
 
     
 <audio id="audio1"   >
-    <source src="/Asset/audio/SampleAudio_0.4mb.mp3" type="audio/mp3" />
+    <source src={`${process.env.ASSET_PATH}audio/SampleAudio_0.4mb.mp3" type="audio/mp3`} />
 </audio>
 <audio id="audio2"  crossorigin playsinline >
     <source src="/audio/SampleAudio_0.4mb.mp3" type="audio/mp3" />

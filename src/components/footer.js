@@ -9,7 +9,7 @@ const Footer = ({ siteTitle }) => (
       <Link to="/" >
         <img
           className={styles.logo}
-          src={`/Asset/m_teaser/Logo - SC Asset-1.svg`}
+          src={`${process.env.ASSET_PATH}m_teaser/Logo - SC Asset-1.svg`}
           alt="logo"
         />
       </Link>
@@ -58,27 +58,27 @@ const Footer = ({ siteTitle }) => (
       <div className={styles.iconContainer}>
         <img
           className={styles.item}
-          src={`/Asset/m_teaser/Icon-Facebook-1.svg`}
+          src={`${process.env.ASSET_PATH}m_teaser/Icon-Facebook-1.svg`}
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/Icon-Instagram-1.svg"
+          src={`${process.env.ASSET_PATH}m_teaser/Icon-Instagram-1.svg`}
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/Icon-YouTube-1.svg"
+          src={`${process.env.ASSET_PATH}m_teaser/Icon-YouTube-1.svg`}
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/Icon-Twitter-1.svg"
+          src={`${process.env.ASSET_PATH}m_teaser/Icon-Twitter-1.svg`}
           alt="FB"
         ></img>
         <img
           className={styles.item}
-          src="/Asset/m_teaser/Icon-Pinterest.svg"
+          src={`${process.env.ASSET_PATH}m_teaser/Icon-Pinterest.svg`}
           alt="FB"
         ></img>
       </div>

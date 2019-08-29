@@ -86,8 +86,8 @@ export default class AudioTrackOld extends React.Component{
    render(){
        const {OID, AudSrc,AudType,CoverImg,Song,Artist,AudStatus } = this.props;   
        console.log(this.props);
-       const playPath = "/Asset/d_teaser/Icon - Play.svg";
-       const pausePath =  "/Asset/d_teaser/Icon - Pause.svg";
+       const playPath = `${process.env.ASSET_PATH}d_teaser/Icon - Play.svg`;
+       const pausePath = `${process.env.ASSET_PATH}d_teaser/Icon - Pause.svg`;
        let srcPath = AudStatus === "play" ? pausePath :playPath;
         
        return (

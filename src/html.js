@@ -21,7 +21,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-25467023-7');`}}
+          gtag('config', 'UA-25467023-2');`}}
         />
 
 {/* GTM */}
@@ -39,7 +39,7 @@ export default function HTML(props) {
         {props.headComponents}
         <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
         <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="/Asset/plugins/bootstrap/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href={`${process.env.ASSET_PATH}plugins/bootstrap/bootstrap-grid.min.css`} />
 
        
       </head>
