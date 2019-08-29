@@ -99,7 +99,7 @@ export default class AudioTrack extends React.Component {
                   
                    return (
                      <div className={styles.audio}>
-                        <img src={CoverImg} alt={Song}></img>
+                        <img className={styles.CoverImg} src={CoverImg} alt={Song}></img>
                        <div className={styles.audioInfo}>
                          <p className={styles.song}>{Song}</p>
                          <p className={styles.artist}>{Artist}</p>

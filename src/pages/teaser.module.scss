@@ -27,6 +27,34 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
      
 }
 
+.banner{
+  position: relative;
+
+  &Front{
+position: absolute;
+  }
+
+  &Back{
+    position: absolute;
+  }
+}
+
+.header{
+  &Banner{
+
+  }
+
+  &Card{
+
+  }
+}
+
+.body{
+  &Cotent{
+
+  }
+}
+
 .bg1{
   background-image: url($m_bg1);
   background-size: cover;
