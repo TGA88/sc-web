@@ -1,1 +1,54 @@
 
+.audio{
+    display:flex;
+    width:100%;
+   align-items: center;
+   border-bottom: 1px solid #FFFFFF;
+   
+
+    .CoverImg{
+    float: left;
+    }
+    &Info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            margin: 0 8px;
+        }
+    }
+
+    &Control{
+margin-left: auto;
+    }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)   {
+    .container{
+        padding: 0 2rem;
+    }
+    .logoRight{
+        height: 18px;
+    }
+    
+    .logoLeft{
+    height: 15px;
+    }
+}
+
+@media (min-width: 992px)  { 
+.song{
+    font-family: 'eq_headlinebold';
+    font-size: 28px;
+    color: white;
+}
+.artist{
+    font-family: 'eq_headlineregular';
+    font-size: 22px;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+}
+

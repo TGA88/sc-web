@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Plyr from 'plyr';
 import classNames from 'classnames';
-import styles from './player.module.scss';
+import styles from './track.module.scss';
 
 import RcAudio from 'react-audio-player';
 
@@ -22,11 +22,41 @@ export default class AudioTrack extends React.Component {
                    super(props)
                  }
 
+              //    componentDidUpdate(){
+              //     console.log('update')
+              
+              //     // This assumes that `FilePlayer` is the currently active player
+              
+              //  const audio = this.refs.reactPlayer.player.player
+              //  console.log("this.refs.reactPlayer", this.refs.reactPlayer);
+              // //unidefined
+              //  console.log("this.refs.reactPlayer.player.player", this.refs.reactPlayer.player.player);
+
+              
+              //  const isActive = this.isSelected(this.context.selectedTrackId,this.props.TrackId);
+              //  const isPlay = isActive ? this.context.trackState:false;
+
+              //  if(isActive && isPlay){
+              //      console.log('load')
+              //   //    audio.load()
+              //   //    //audio.unmute();
+              //   //  audio.play()
+                
+              //    }else{
+              //      console.log('pause');
+              //        audio.pause();
+              //        this.refs.reactPlayer.getInternalPlayer().currentTime=0;
+              //        //audio.currentTime=0;
+              //    }
+              // }
+
                  onAction() {
                    console.log("onAction")
                    console.log(`TrackId : ${this.props.TrackId}`)
                    if (this.context.selectedTrackId != this.props.TrackId) {
                      console.log(`fire onTrackChanged:${this.props.TrackId}`)
+                     // reset to start time of track
+                     this.refs.reactPlayer.getInternalPlayer().currentTime=0;
                      this.context.onTrackChanged(this.props.TrackId)
                    } else {
                      const nTrackState = !this.context.trackState
@@ -41,8 +71,6 @@ export default class AudioTrack extends React.Component {
                  render() {
                    const {
                      TrackId,
-                     AudSrc,
-                     AudType,
                      CoverImg,
                      Song,
                      Artist,
@@ -61,16 +89,15 @@ export default class AudioTrack extends React.Component {
                    }
         
 
-                   let SourcePath = "/Asset/audio/";
+                  
                    return (
                      <div className={styles.audio}>
+                        <img src={CoverImg} alt={Song}></img>
                        <div className={styles.audioInfo}>
-                         <p>{Song}</p>
-                         <p>{Artist}</p>
-                         <img src={CoverImg} alt={Song}></img>
+                         <p className={styles.song}>{Song}</p>
+                         <p className={styles.artist}>{Artist}</p>
                        </div>
-
-                       <div className={styles.audControl}>
+                       <div className={styles.audioControl}>
                          <img
                            src={`${srcPath}`}
                            onClick={this.onAction.bind(this)}
