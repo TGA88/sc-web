@@ -89,7 +89,7 @@ export default class Teaser extends Component {
                     ></img>
                     <img
                       className={styles.item}
-                      src={`${process.env.ASSET_PATH}Asset/m_teaser/Icon - Social - Twitter.svg`}
+                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Twitter.svg`}
                       alt="FB"
                     ></img>
                     
@@ -107,7 +107,7 @@ export default class Teaser extends Component {
             >
               <ScAudioTrack
                 TrackId="play1"
-                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Red.png"`}
+                CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Red.png`}
                 Artist={"Bird Thongchai"}
                 Song={"สบาย สบาย"}
                 Source={[
