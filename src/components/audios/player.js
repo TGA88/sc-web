@@ -23,8 +23,9 @@ export default class AudioPlayer extends React.Component {
                     this.onTrackStateChanged.bind(this);
                   }
 
-                 onTrackChanged(trackId) {
-                    this.setState({ selectedTrackId: trackId, trackState: true },()=> this.props.onStateChanged(this.state))
+                 onTrackChanged({TrackId,TrackBanner}) {
+                   console.log(`onTrackChange: ${TrackId} , TrackBanner : ${TrackBanner}`)
+                    this.setState({ selectedTrackId: TrackId, trackState: true ,trackBanner:TrackBanner},()=> this.props.onStateChanged(this.state))
                    
                  }
 
@@ -36,6 +37,7 @@ export default class AudioPlayer extends React.Component {
                  state = {
                    selectedTrackId: this.props.selectedTrackId,
                    trackState: this.props.trackState,
+                   trackBanner:""
                  }
                
 

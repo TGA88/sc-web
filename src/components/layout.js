@@ -31,20 +31,7 @@ const Layout = ({ children }) => {
     <>
 
     <div className={styles.container}>
- 
-   
       <Header siteTitle={data.site.siteMetadata.title} />
-      {/* <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: '100%',
-          // padding: `0px 1.0875rem 1.45rem`,
-          // paddingTop: 0,
-        }}
-      >
-       <div className={styles.content}> <main style={{position:"relative"}}>{children}</main>
-       </div>
-      </div> */}
       <MainContent>
         {children}
         <Footer></Footer>

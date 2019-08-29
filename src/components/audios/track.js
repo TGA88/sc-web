@@ -57,7 +57,7 @@ export default class AudioTrack extends React.Component {
                      console.log(`fire onTrackChanged:${this.props.TrackId}`)
                      // reset to start time of track
                      this.refs.reactPlayer.getInternalPlayer().currentTime=0;
-                     this.context.onTrackChanged(this.props.TrackId)
+                     this.context.onTrackChanged({TrackId:this.props.TrackId,TrackBanner:this.props.TrackBanner})
                    } else {
                      const nTrackState = !this.context.trackState;
                      console.log(`fire onTrackStateChanged:${nTrackState}`)
