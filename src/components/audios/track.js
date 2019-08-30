@@ -110,6 +110,7 @@ export default class AudioTrack extends React.Component {
                            onClick={this.onAction.bind(this)}
                          ></img>
                        </div>
+                      
 
                        <ReactPlayer
                          ref="reactPlayer"

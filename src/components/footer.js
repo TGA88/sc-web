@@ -13,7 +13,7 @@ const Footer = ({ siteTitle }) => (
           alt="logo"
         />
       </Link>
-      <div className={`container ${styles.right}`}>
+      <div className={`container ${styles.right} ${styles.topBlock}`}>
         <div className={`row ${styles.rowLink}`}>
           <a
             href="http://www.scasset.com"
@@ -38,31 +38,34 @@ const Footer = ({ siteTitle }) => (
 
     <div className={styles.social}>
       <div className={styles.iconContainer}>
+        <a href="https://www.facebook.com/scasset">
         <img
           className={styles.item}
           src={`${process.env.ASSET_PATH}m_teaser/Icon-Facebook-1.svg`}
           alt="FB"
         ></img>
+        </a>
+        <a href="https://www.instagram.com/scasset">
         <img
           className={styles.item}
           src={`${process.env.ASSET_PATH}m_teaser/Icon-Instagram-1.svg`}
           alt="FB"
         ></img>
+        </a>
+        <a href="https://www.youtube.com/scassetonline">
         <img
           className={styles.item}
           src={`${process.env.ASSET_PATH}m_teaser/Icon-YouTube-1.svg`}
           alt="FB"
         ></img>
+        </a>
+        <a href="https://twitter.com/sc_asset">
         <img
           className={styles.item}
           src={`${process.env.ASSET_PATH}m_teaser/Icon-Twitter-1.svg`}
           alt="FB"
         ></img>
-        <img
-          className={styles.item}
-          src={`${process.env.ASSET_PATH}m_teaser/Icon-Pinterest.svg`}
-          alt="FB"
-        ></img>
+        </a>
       </div>
       <div className={styles.copyright}>© 2019 SC Asset Corporation PLC</div>
     </div>

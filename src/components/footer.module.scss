@@ -26,7 +26,10 @@ text-decoration: none;
        text-align: center;
    }
    .right{
-    margin-left: 1rem;
+   // margin-left: 1rem;
+    }
+    .topBlock{
+        margin-block-start: 0.5rem;
     }
     .logo{
         width: 106px;

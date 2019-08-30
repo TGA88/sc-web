@@ -1,54 +1,59 @@
-// $d_bg1 : "/Asset/d_teaser/Egg Red Background.png";
-// $t_bg1 : "/Asset/t_teaser/Egg Red Background.png";
-// $m_bg1 : "/Asset/m_teaser/Egg Red Background.png";
+$d_bg1 : "/Asset/d_teaser/Egg Red Background.png";
+$t_bg1 : "/Asset/t_teaser/Egg Red Background.png";
+$m_bg1 : "/Asset/m_teaser/Egg Red Background.png";
 
-// $d_bg2 : "/Asset/d_teaser/Egg Green Background.png";
-// $t_bg2 : "/Asset/t_teaser/Egg Green Background.png";
-// $m_bg2 : "/Asset/m_teaser/Egg Green Background.png";
+$d_bg2 : "/Asset/d_teaser/Egg Green Background.png";
+$t_bg2 : "/Asset/t_teaser/Egg Green Background.png";
+$m_bg2 : "/Asset/m_teaser/Egg Green Background.png";
 
-// $d_bg3 : "/Asset/d_teaser/Egg Yellow Background.png";
-// $t_bg3 : "/Asset/t_teaser/Egg Yellow Background.png";
-// $m_bg3 : "/Asset/m_teaser/Egg Yellow Background.png";
+$d_bg3 : "/Asset/d_teaser/Egg Yellow Background.png";
+$t_bg3 : "/Asset/t_teaser/Egg Yellow Background.png";
+$m_bg3 : "/Asset/m_teaser/Egg Yellow Background.png";
 
-// $d_bg4 : "/Asset/d_teaser/Egg Pink Background.png";
-// $t_bg4 : "/Asset/t_teaser/Egg Pink Background.png";
-// $m_bg4 : "/Asset/m_teaser/Egg Pink Background.png";
+$d_bg4 : "/Asset/d_teaser/Egg Pink Background.png";
+$t_bg4 : "/Asset/t_teaser/Egg Pink Background.png";
+$m_bg4 : "/Asset/m_teaser/Egg Pink Background.png";
 
-// $d_bg5 : "/Asset/d_teaser/Egg Blue Background.png";
-// $t_bg5 : "/Asset/t_teaser/Egg Blue Background.png";
-// $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
-
-
-$d_bg1 : "/homesforallbirds/Asset/d_teaser/Egg Red Background.png";
-$t_bg1 : "/homesforallbirds/Asset/t_teaser/Egg Red Background.png";
-$m_bg1 : "/homesforallbirds/Asset/m_teaser/Egg Red Background.png";
-
-$d_bg2 : "/homesforallbirds/Asset/d_teaser/Egg Green Background.png";
-$t_bg2 : "/homesforallbirds/Asset/t_teaser/Egg Green Background.png";
-$m_bg2 : "/homesforallbirds/Asset/m_teaser/Egg Green Background.png";
-
-$d_bg3 : "/homesforallbirds/Asset/d_teaser/Egg Yellow Background.png";
-$t_bg3 : "/homesforallbirds/Asset/t_teaser/Egg Yellow Background.png";
-$m_bg3 : "/homesforallbirds/Asset/m_teaser/Egg Yellow Background.png";
-
-$d_bg4 : "/homesforallbirds/Asset/d_teaser/Egg Pink Background.png";
-$t_bg4 : "/homesforallbirds/Asset/t_teaser/Egg Pink Background.png";
-$m_bg4 : "/homesforallbirds/Asset/m_teaser/Egg Pink Background.png";
-
-$d_bg5 : "/homesforallbirds/Asset/d_teaser/Egg Blue Background.png";
-$t_bg5 : "/homesforallbirds/Asset/t_teaser/Egg Blue Background.png";
-$m_bg5 : "/homesforallbirds/Asset/m_teaser/Egg Blue Background.png";
+$d_bg5 : "/Asset/d_teaser/Egg Blue Background.png";
+$t_bg5 : "/Asset/t_teaser/Egg Blue Background.png";
+$m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
 
 
+// $d_bg1 : "/homesforallbirds/Asset/d_teaser/Egg Red Background.png";
+// $t_bg1 : "/homesforallbirds/Asset/t_teaser/Egg Red Background.png";
+// $m_bg1 : "/homesforallbirds/Asset/m_teaser/Egg Red Background.png";
+
+// $d_bg2 : "/homesforallbirds/Asset/d_teaser/Egg Green Background.png";
+// $t_bg2 : "/homesforallbirds/Asset/t_teaser/Egg Green Background.png";
+// $m_bg2 : "/homesforallbirds/Asset/m_teaser/Egg Green Background.png";
+
+// $d_bg3 : "/homesforallbirds/Asset/d_teaser/Egg Yellow Background.png";
+// $t_bg3 : "/homesforallbirds/Asset/t_teaser/Egg Yellow Background.png";
+// $m_bg3 : "/homesforallbirds/Asset/m_teaser/Egg Yellow Background.png";
+
+// $d_bg4 : "/homesforallbirds/Asset/d_teaser/Egg Pink Background.png";
+// $t_bg4 : "/homesforallbirds/Asset/t_teaser/Egg Pink Background.png";
+// $m_bg4 : "/homesforallbirds/Asset/m_teaser/Egg Pink Background.png";
+
+// $d_bg5 : "/homesforallbirds/Asset/d_teaser/Egg Blue Background.png";
+// $t_bg5 : "/homesforallbirds/Asset/t_teaser/Egg Blue Background.png";
+// $m_bg5 : "/homesforallbirds/Asset/m_teaser/Egg Blue Background.png";
 
 
+
+.body{
+  padding: 0 0.5rem;
+
+
+}
 .banner{
   display: flex;
   flex-direction: column;
 
   &Cover{
-width:288px;
-height: 232px;
+// width:288px;
+// height: 232px;
+max-height: 300px;
 margin-bottom: 16px;
   }
 
@@ -98,7 +103,7 @@ margin: 1rem;
   
     &Icons{
       img{
-  margin: 0.5rem 1rem 0.5rem 0;
+  margin: 1rem 2rem 0rem 0;
 
       }
     }
@@ -152,6 +157,17 @@ margin: 1rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)  {  
+  .banner{
+    &Cover{
+  max-height: unset;
+ margin-left: -16px
+    }
+  }
+
 }
 
 // Medium devices (tablets, 768px and up)

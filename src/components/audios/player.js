@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes  from 'prop-types';
+import styles from './player.module.scss';
 
 export default class AudioPlayer extends React.Component {
                  static childContextTypes = {
@@ -42,7 +43,11 @@ export default class AudioPlayer extends React.Component {
                
 
                  render() {
-                   return <>{this.props.children}</>
+                   return <>
+                   <div className={styles.player}>
+                   {this.props.children}
+                   </div>
+                   </>
                  }
                }
 

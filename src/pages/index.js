@@ -49,17 +49,23 @@ export default class Teaser extends Component {
             <div className={`${styles.banner}`}>
               <img
                 className={styles.bannerCover}
-                src={this.state.bannerImage} alt="banner"
+                src={this.state.bannerImage}
+                alt="banner"
               ></img>
               <div className={styles.bannerCard}>
                 <div className={styles.bannerCardHeader}>
-                  <div className={styles.bannerCardHeaderTextBold}>เอสซี แอสเสท</div>
+                  <div className={styles.bannerCardHeaderTextBold}>
+                    เอสซี แอสเสท
+                  </div>
                   <br />
-                  <div className={styles.bannerCardHeaderTitle}>HOME FOR ALL BIRDS</div>
+                  <div className={styles.bannerCardHeaderTitle}>
+                    HOME FOR ALL BIRDS
+                  </div>
                 </div>
                 <div className={styles.bannerCardBody}>
                   <div className={styles.bannerCardBodyTextBold}>
-                    "เรานั้นจะอยู่ เรียนรู้กันไป จะทุกข์ จะสุขเพียงไหน สบาย สบาย.."
+                    "เรานั้นจะอยู่ เรียนรู้กันไป จะทุกข์ จะสุขเพียงไหน สบาย
+                    สบาย.."
                   </div>
                   <div className={styles.bannerCardBodyText}>
                     ยังจำบทเพลงเหล่านี้ได้ไหม
@@ -70,29 +76,38 @@ export default class Teaser extends Component {
                 </div>
 
                 <div className={styles.bannerCardFooter}>
-                  <div className={styles.bannerCardFooterTextBold}>ติดตามอัพเดตได้ที่</div>
+                  <div className={styles.bannerCardFooterTextBold}>
+                    ติดตามอัพเดตได้ที่
+                  </div>
                   <div className={styles.bannerCardFooterIcons}>
-                    <img
-                      className={styles.item}
-                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Facebook.svg`}
-                      alt="FB"
-                    ></img>
-                    <img
-                      className={styles.item}
-                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Instagram.svg`}
-                      alt="FB"
-                    ></img>
-                    <img
-                      className={styles.item}
-                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - YouTube.svg`}
-                      alt="FB"
-                    ></img>
-                    <img
-                      className={styles.item}
-                      src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Twitter.svg`}
-                      alt="FB"
-                    ></img>
-                    
+                    <a href="https://www.facebook.com/scasset">
+                      <img
+                        className={styles.item}
+                        src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Facebook.svg`}
+                        alt="FB"
+                      ></img>
+                    </a>
+                    <a href="https://www.instagram.com/scasset">
+                      <img
+                        className={styles.item}
+                        src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Instagram.svg`}
+                        alt="FB"
+                      ></img>
+                    </a>
+                    <a href="https://www.youtube.com/scassetonline">
+                      <img
+                        className={styles.item}
+                        src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - YouTube.svg`}
+                        alt="FB"
+                      ></img>
+                    </a>
+                    <a href="https://twitter.com/sc_asset">
+                      <img
+                        className={styles.item}
+                        src={`${process.env.ASSET_PATH}m_teaser/Icon - Social - Twitter.svg`}
+                        alt="FB"
+                      ></img>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -116,6 +131,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Red CD.png`}
               ></ScAudioTrack>
+              <hr/>
               <ScAudioTrack
                 TrackId="play2"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Green.png`}
@@ -127,6 +143,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Green CD.png`}
               ></ScAudioTrack>
+               <hr/>
               <ScAudioTrack
                 TrackId="play3"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Yellow.png`}
@@ -138,6 +155,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Yellow CD.png`}
               ></ScAudioTrack>
+               <hr/>
               <ScAudioTrack
                 TrackId="play4"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Pink.png`}
@@ -149,6 +167,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Pink CD.png`}
               ></ScAudioTrack>
+               <hr/>
 
               <ScAudioTrack
                 TrackId="play5"
@@ -167,6 +186,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Blue CD.png`}
               ></ScAudioTrack>
+               <hr/>
             </ScAudioPlayer>
           </div>
         </div>
