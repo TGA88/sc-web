@@ -230,7 +230,7 @@ margin: 1rem;
       &Icons{
         img{
     margin: 0.5rem 1rem 0.5rem 0;
-  
+    min-height: 23px;
         }
       }
     }
@@ -323,10 +323,14 @@ margin: 1rem;
   
     &Icons{
       img{
-  margin: 0.5rem 3rem 0.5rem 0;
+  margin: 1rem 3rem 1rem 0;
+  min-height: 41px;
 
       }
     }
+    // .item{
+    //   min-height: 41px;
+    // }
   }
 
 

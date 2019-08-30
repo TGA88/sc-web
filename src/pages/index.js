@@ -59,7 +59,7 @@ export default class Teaser extends Component {
                   </div>
                   <br />
                   <div className={styles.bannerCardHeaderTitle}>
-                    HOME FOR ALL BIRDS
+                    HOMES FOR ALL BIRDS
                   </div>
                 </div>
                 <div className={styles.bannerCardBody}>

@@ -17,19 +17,19 @@ const Footer = ({ siteTitle }) => (
         <div className={`row ${styles.rowLink}`}>
           <a
             href="http://www.scasset.com"
-            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
+            className={`col-4 col-sm-4 col-md-3 col-xl-3 ${styles.colLink}`}
           >
             Official Website
           </a>
           <a
             href="https://www.scasset.com/baanruejai/"
-            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
+            className={`col-4 col-sm-4 col-md-3 col-xl-3 ${styles.colLink}`}
           >
             BaanRuejai
           </a>
           <a
             href="http://www.scable.co.th"
-            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
+            className={`col-4 col-sm-4 col-md-3 col-xl-3 ${styles.colLink}`}
           >SC Able</a>
         </div>
       </div>
