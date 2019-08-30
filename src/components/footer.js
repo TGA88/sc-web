@@ -6,7 +6,7 @@ import styles from './footer.module.scss';
 const Footer = ({ siteTitle }) => (
   <footer className={`${styles.container}`}>
     <div className={`${styles.containerLink}`}>
-      <Link to="/" >
+      <Link to="/">
         <img
           className={styles.logo}
           src={`${process.env.ASSET_PATH}m_teaser/Logo - SC Asset-1.svg`}
@@ -15,40 +15,22 @@ const Footer = ({ siteTitle }) => (
       </Link>
       <div className={`container ${styles.right}`}>
         <div className={`row ${styles.rowLink}`}>
-          <Link
-            to="/"
-            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink} ${styles.textBold}`}
-          >
-            ABOUT US
-          </Link>
-          <Link
-            to="/"
-            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink} ${styles.textBold}`}
-          >
-            QUICK LINKS
-          </Link>
-        </div>
-        <div className={`row ${styles.rowLink}`}>
-          <Link
-            to="/"
-            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
-          >
-            Our Company
-          </Link>
-          <Link
-            to="/"
-            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
+          <a
+            href="http://www.scasset.com"
+            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
           >
             Official Website
-          </Link>
-        </div>
-        <div className={`row ${styles.rowLink}`}>
-          <Link
-            to="/"
-            className={`col-6 col-sm-3 col-md-5 col-xl-4 ${styles.colLink}`}
+          </a>
+          <a
+            href="https://www.scasset.com/baanruejai/"
+            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
           >
-            Newsroom
-          </Link>
+            BaanRuejai
+          </a>
+          <a
+            href="http://www.scable.co.th"
+            className={`col-4 col-sm-4 col-md-3 col-xl-4 ${styles.colLink}`}
+          >SC Able</a>
         </div>
       </div>
     </div>
@@ -84,7 +66,6 @@ const Footer = ({ siteTitle }) => (
       </div>
       <div className={styles.copyright}>© 2019 SC Asset Corporation PLC</div>
     </div>
-   
   </footer>
 )
 
