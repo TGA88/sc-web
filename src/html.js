@@ -41,6 +41,42 @@ export default function HTML(props) {
         <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href={`${process.env.ASSET_PATH}plugins/bootstrap/bootstrap-grid.min.css`} />
 
+<style 
+ dangerouslySetInnerHTML={{ __html: `
+
+ @font-face {
+  font-family: 'eq_headlinebold';
+  src: url('${process.env.ASSET_PATH}font/eq_headline-bold-webfont.woff2') format('woff2'),
+       url('${process.env.ASSET_PATH}font/eq_headline-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'eq_headlineregular';
+  src: url('${process.env.ASSET_PATH}font/eq_headline-regular-webfont.woff2') format('woff2'),
+       url('${process.env.ASSET_PATH}font/eq_headline-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html, body, #___gatsby {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
+  overflow: hidden;
+}
+`,}}
+/>
        
       </head>
       <body {...props.bodyAttributes}>
