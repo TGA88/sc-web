@@ -83,15 +83,31 @@ text-decoration: none;
   }
 
   .containerLink{
+    display: flex;
+    flex-direction: row;
+    font-family: 'eq_headlineregular';
+    font-size: 14px;
+    margin-block-end: 1rem;
+
+    .rowLink{
+        margin-bottom: 1rem;
+    }
+    .topBlock{
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+    }
     .right{
       //  margin-left: 4.5rem;
         }
 
         .logo{
-            width: 100%;
-            margin-right: 2rem;
+            // width: 100%;
+            // margin-right: 2rem;
+            width: auto;
+            min-height: 36px;
             // height: 2rem;
         }
+        
   }
 
   .social{
@@ -139,9 +155,10 @@ text-decoration: none;
         flex-direction: row;
         font-family: 'eq_headlineregular';
         font-size: 20px;
-        margin-block-end: 1rem;
+        margin-block-end: 1.5rem;
         .topBlock{
             margin-block-end: 0.5rem;
+            margin-block-start: 0.5rem;
         }
         .logo{
             width: auto;

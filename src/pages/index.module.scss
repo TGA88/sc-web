@@ -53,6 +53,7 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
   &Cover{
 // width:288px;
 // height: 232px;
+object-fit: contain;
 max-height: 300px;
 margin-bottom: 16px;
   }
@@ -278,10 +279,16 @@ margin: 1rem;
   flex-direction: row;
 
   &Cover{
-    width: 670px;
-    height: 540px;
+    // width: 670px;
+    // height: 540px;
+    // margin-bottom: 16px;
+    // margin-left: -16px;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
     margin-bottom: 16px;
     margin-left: -16px;
+    min-width: 10rem;
   }
 
   &Card{
