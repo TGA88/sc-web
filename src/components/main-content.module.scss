@@ -1,5 +1,6 @@
 .content{
   flex-grow: 1;
   overflow-y: auto;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
+
 }

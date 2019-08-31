@@ -1,10 +1,15 @@
 .container{
-    min-width: 100%;
+  
     min-height: 238px;
-    padding: 2rem 1rem 1.125rem 1rem;
+    padding: 2rem 5% 1.125rem 5%;
     background: #666666 0% 0% no-repeat padding-box;
     opacity: 1;
    
+}
+.contentContainer{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2%;
 }
 
 .containerLink{
@@ -13,9 +18,12 @@
     align-items: center;
    font-family: 'eq_headlineregular';
    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+
    a{
     color: #FFFFFF;
 text-decoration: none;
+
    }
 
    .rowLink{
@@ -24,6 +32,7 @@ text-decoration: none;
    .colLink{
        padding: 0;
        text-align: center;
+       margin: 1rem;
    }
    .right{
    // margin-left: 1rem;
@@ -32,9 +41,9 @@ text-decoration: none;
         margin-block-start: 0.5rem;
     }
     .logo{
-        width: 106px;
+        width: 63px;
         height: 32px;
-             margin-right: 1rem;
+           //  margin-right: 1rem;
     }
 }
 
@@ -73,13 +82,23 @@ text-decoration: none;
 // @media (max-width: 575.98px) { ... }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px)  {  }
+@media (min-width: 576px)  { 
+    .container{
+      
+       padding-left: 5%;
+       padding-right: 5%;
+       
+    }
+
+ }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px)   {
     .container{
-     padding-left: 2rem;
-     padding-right: 2rem;
+    //  padding-left: 2rem;
+    //  padding-right: 2rem;
+     padding-left: 2%;
+     padding-right: 2%;
   }
 
   .containerLink{
@@ -88,7 +107,7 @@ text-decoration: none;
     font-family: 'eq_headlineregular';
     font-size: 14px;
     margin-block-end: 1rem;
-
+    padding-bottom: 1rem;
     .rowLink{
         margin-bottom: 1rem;
     }
@@ -143,12 +162,15 @@ text-decoration: none;
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px)  {  
+@media (min-width: 1024px)  {  
     .container{
         // padding-left: 16.25rem;
         // padding-right: 16.25rem;
-        padding-left: 13.5rem;
-        padding-right: 13.5rem;
+        // padding-left: 13.5rem;
+        // padding-right: 13.5rem;
+       
+        padding-left: 0;
+        padding-right: 0;
      }
      .containerLink{   
          display: flex;
@@ -156,9 +178,15 @@ text-decoration: none;
         font-family: 'eq_headlineregular';
         font-size: 20px;
         margin-block-end: 1.5rem;
+        padding-bottom: 1.5rem;
+        .colLink{
+           margin: 0 2rem;
+        }
         .topBlock{
             margin-block-end: 0.5rem;
             margin-block-start: 0.5rem;
+
+            margin: 0 1rem;
         }
         .logo{
             width: auto;

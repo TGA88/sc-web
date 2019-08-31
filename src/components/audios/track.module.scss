@@ -3,7 +3,7 @@
     display:flex;
     width:100%;
    align-items: center;
-//    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
    margin-bottom: 0.25rem;
 
 
@@ -11,6 +11,7 @@
     float: left;
     width: 55px;
     height: 55px;
+    margin-left: -8px;
     }
     &Info{
         display: flex;
@@ -75,7 +76,7 @@ img{
     }
 }
 
-@media (min-width: 992px)  { 
+@media (min-width: 1024px)  { 
     .audio{
 
         .CoverImg{

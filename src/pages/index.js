@@ -44,7 +44,10 @@ export default class Teaser extends Component {
     console.log(process.env.ASSET_PATH);
     return (
       <Layout>
-        <div className={`${containerCss}`}>
+        <div className={`${containerCss} `}>
+          <div className={`${styles.innerContainer}`}>
+
+         
           <div className={styles.header}>
             <div className={`${styles.banner}`}>
               <img
@@ -63,13 +66,11 @@ export default class Teaser extends Component {
                   </div>
                 </div>
                 <div className={styles.bannerCardBody}>
-                  <div className={styles.bannerCardBodyTextBold}>
+                  {/* <div className={styles.bannerCardBodyTextBold}>
                     "เรานั้นจะอยู่ เรียนรู้กันไป จะทุกข์ จะสุขเพียงไหน สบาย
                     สบาย.."
-                  </div>
+                  </div> */}
                   <div className={styles.bannerCardBodyText}>
-                    ยังจำบทเพลงเหล่านี้ได้ไหม
-                    จำช่วงเวลาที่มีแต่ความสบายใจได้หรือเปล่า? อดใจไว้อีกนิด
                     เตรียมพบกับเรื่องราวที่จะเชื่อมต่อความสัมพันธ์ของบ้าน
                     ครอบครัว และบทเพลงได้ที่นี่ เร็วๆ นี้
                   </div>
@@ -129,9 +130,9 @@ export default class Teaser extends Component {
                   { src: `${SourcePath}สบาย สบาย.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}สบาย สบาย.ogg`, type: "audio/ogg" },
                 ]}
-                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Red CD.png`}
+                TrackBanner={`${process.env.ASSET_PATH}m_teaser/Egg Red CD.png`}
               ></ScAudioTrack>
-              <hr/>
+             
               <ScAudioTrack
                 TrackId="play2"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Green.png`}
@@ -143,7 +144,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Green CD.png`}
               ></ScAudioTrack>
-               <hr/>
+              
               <ScAudioTrack
                 TrackId="play3"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Yellow.png`}
@@ -155,7 +156,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Yellow CD.png`}
               ></ScAudioTrack>
-               <hr/>
+              
               <ScAudioTrack
                 TrackId="play4"
                 CoverImg={`${process.env.ASSET_PATH}d_teaser/Egg Pink.png`}
@@ -167,7 +168,7 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Pink CD.png`}
               ></ScAudioTrack>
-               <hr/>
+            
 
               <ScAudioTrack
                 TrackId="play5"
@@ -186,8 +187,9 @@ export default class Teaser extends Component {
                 ]}
                 TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Blue CD.png`}
               ></ScAudioTrack>
-               <hr/>
+             
             </ScAudioPlayer>
+          </div>
           </div>
         </div>
       </Layout>

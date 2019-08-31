@@ -1,22 +1,22 @@
-$d_bg1 : "/Asset/d_teaser/Egg Red Background.png";
-$t_bg1 : "/Asset/t_teaser/Egg Red Background.png";
-$m_bg1 : "/Asset/m_teaser/Egg Red Background.png";
+// $d_bg1 : "/Asset/d_teaser/Egg Red Background.png";
+// $t_bg1 : "/Asset/t_teaser/Egg Red Background.png";
+// $m_bg1 : "/Asset/m_teaser/Egg Red Background.png";
 
-$d_bg2 : "/Asset/d_teaser/Egg Green Background.png";
-$t_bg2 : "/Asset/t_teaser/Egg Green Background.png";
-$m_bg2 : "/Asset/m_teaser/Egg Green Background.png";
+// $d_bg2 : "/Asset/d_teaser/Egg Green Background.png";
+// $t_bg2 : "/Asset/t_teaser/Egg Green Background.png";
+// $m_bg2 : "/Asset/m_teaser/Egg Green Background.png";
 
-$d_bg3 : "/Asset/d_teaser/Egg Yellow Background.png";
-$t_bg3 : "/Asset/t_teaser/Egg Yellow Background.png";
-$m_bg3 : "/Asset/m_teaser/Egg Yellow Background.png";
+// $d_bg3 : "/Asset/d_teaser/Egg Yellow Background.png";
+// $t_bg3 : "/Asset/t_teaser/Egg Yellow Background.png";
+// $m_bg3 : "/Asset/m_teaser/Egg Yellow Background.png";
 
-$d_bg4 : "/Asset/d_teaser/Egg Pink Background.png";
-$t_bg4 : "/Asset/t_teaser/Egg Pink Background.png";
-$m_bg4 : "/Asset/m_teaser/Egg Pink Background.png";
+// $d_bg4 : "/Asset/d_teaser/Egg Pink Background.png";
+// $t_bg4 : "/Asset/t_teaser/Egg Pink Background.png";
+// $m_bg4 : "/Asset/m_teaser/Egg Pink Background.png";
 
-$d_bg5 : "/Asset/d_teaser/Egg Blue Background.png";
-$t_bg5 : "/Asset/t_teaser/Egg Blue Background.png";
-$m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
+// $d_bg5 : "/Asset/d_teaser/Egg Blue Background.png";
+// $t_bg5 : "/Asset/t_teaser/Egg Blue Background.png";
+// $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
 
 
 // $d_bg1 : "/homesforallbirds/Asset/d_teaser/Egg Red Background.png";
@@ -39,10 +39,16 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
 // $t_bg5 : "/homesforallbirds/Asset/t_teaser/Egg Blue Background.png";
 // $m_bg5 : "/homesforallbirds/Asset/m_teaser/Egg Blue Background.png";
 
+.innerContainer{
+max-width: 1400px;
+margin: 0 auto;
+}
+.header{
 
+}
 
 .body{
-  padding: 0 0.5rem;
+  padding: 0 0rem;
 
 
 }
@@ -54,13 +60,16 @@ $m_bg5 : "/Asset/m_teaser/Egg Blue Background.png";
 // width:288px;
 // height: 232px;
 object-fit: contain;
-max-height: 300px;
+width: 100%;
+    height: auto;
+    min-width: 320px;
 margin-bottom: 16px;
+margin-left:-16px;
   }
 
   &Card{
-line-height: 1.5rem;
-margin: 1rem;
+// line-height: 1.5rem;
+margin: 1rem 0;
       &HeaderTitle{
         font-family: "eq_headlinebold";
         font-size: 28px;
@@ -81,7 +90,7 @@ margin: 1rem;
   
           margin: 1rem 0;
           line-height: 2rem;
-          width: 223px;
+        //  width: 223px;
         }
   
         &Text{
@@ -118,9 +127,11 @@ margin: 1rem;
 .container{
    width: 100%;
       margin: 0;
-      padding: 2rem 0.5rem 2.25rem 0.5rem;
+      // padding: 2rem 0.5rem 2.25rem 0.5rem;
+      padding: 2rem 5%;
       // min-height: -webkit-fill-available;
       min-height: auto;
+      
      
 }
 .bg1{
@@ -128,74 +139,84 @@ margin: 1rem;
   // background-size: cover;
   // background-repeat: no-repeat;
   // background-attachment: fixed;
-  background: #F05A27;
+  background: #F05a27;
 }
 
 .bg2{
-  background-image: url($m_bg2);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url($m_bg2);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background: #1d6c5f;
 }
 
 
 .bg3{
-  background-image: url($m_bg3);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url($m_bg3);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background: #e2bc4b;
 }
 
+
 .bg4{
-  background-image: url($m_bg4);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url($m_bg4);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background: #f38ba5;
 }
 
 .bg5{
-  background-image: url($m_bg5);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url($m_bg5);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background: #396ca6
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px)  {  
   .banner{
     &Cover{
-  max-height: unset;
- margin-left: -16px
+ // max-height: unset;
+ margin-left: -16px;
+
     }
   }
 
+  .container{
+       padding: 2rem 5%;
+ }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px)   {
-  .bg1{
-    background-image: url($t_bg1);
-  }
+  // .bg1{
+  //   background-image: url($t_bg1);
+  // }
   
-  .bg2{
-    background-image: url($t_bg2);
-  }
+  // .bg2{
+  //   background-image: url($t_bg2);
+  // }
 
-  .bg3{
-    background-image: url($t_bg3);
-  }
+  // .bg3{
+  //   background-image: url($t_bg3);
+  // }
 
-  .bg4{
-    background-image: url($t_bg4);
-  }
+  // .bg4{
+  //   background-image: url($t_bg4);
+  // }
 
-  .bg5{
-    background-image: url($t_bg5);
-  }
+  // .bg5{
+  //   background-image: url($t_bg5);
+  // }
 
   .container{
     
-       padding: 2rem 1rem 2.25rem 1rem;
+       //padding: 2rem 1rem 2.25rem 1rem;
+       padding: 2rem 2%;
  }
 
 
@@ -204,9 +225,13 @@ margin: 1rem;
     flex-direction: row;
   
     &Cover{
-      width: 336px;
-      height: 271px;
-  margin-bottom: 16px;
+      // width: 336px;
+      // height: 271px;
+  // margin-bottom: 16px;
+
+  max-width: 400px;
+  min-width: 200px;
+  
     }
   
     &Card{
@@ -230,7 +255,7 @@ margin: 1rem;
     
       &Icons{
         img{
-    margin: 0.5rem 1rem 0.5rem 0;
+    margin: 0.5rem 2.5rem 0.5rem 0;
     min-height: 23px;
         }
       }
@@ -242,36 +267,38 @@ margin: 1rem;
 
 }
 
-@media (min-width: 992px)  { 
+// @media (min-width: 992px)  { 
+  @media (min-width: 1024px)  { 
 
-  .bg1{
-    background-image: url($d_bg1);
+  // .bg1{
+  //   background-image: url($d_bg1);
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  // background-attachment: fixed;
-  }
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // // background-attachment: fixed;
+  // }
   
-  .bg2{
-    background-image: url($d_bg2);
-  }
+  // .bg2{
+  //   background-image: url($d_bg2);
+  // }
 
-  .bg3{
-    background-image: url($d_bg3);
-  }
+  // .bg3{
+  //   background-image: url($d_bg3);
+  // }
 
-  .bg4{
-    background-image: url($d_bg4);
-  }
+  // .bg4{
+  //   background-image: url($d_bg4);
+  // }
 
-  .bg5{
-    background-image: url($d_bg5);
-  }
+  // .bg5{
+  //   background-image: url($d_bg5);
+  // }
 
 
   .container{
     
-    padding: 2rem 13.5rem 2.25rem 13.5rem;
+   // padding: 2rem 13.5rem 2.25rem 13.5rem;
+   padding: 2rem 2%;
 }
 
 .banner{
@@ -279,21 +306,21 @@ margin: 1rem;
   flex-direction: row;
 
   &Cover{
-    // width: 670px;
-    // height: 540px;
-    // margin-bottom: 16px;
-    // margin-left: -16px;
-    object-fit: contain;
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
-    margin-left: -16px;
-    min-width: 10rem;
+    
+  //   object-fit: contain;
+  // width: 100%;
+  // max-width: unset;
+  //   height: auto;
+  max-width: 100%;
+  min-width: 400px;
+    margin-bottom: 24px;
+    margin-left: -24px;
+    
   }
 
   &Card{
-    line-height: unset;
-    margin-top: 3rem;
+   // line-height: unset;
+   // margin-top: 3rem;
     &HeaderTitle{
       font-size: 39px;
     }
