@@ -118,7 +118,7 @@ export default class Teaser extends Component {
           <div className={styles.body}>
             <ScAudioPlayer
               selectedTrackId={"play1"}
-              trackState={true}
+              trackState={false}
               onStateChanged={e => this.handleAudioPlayerStateChanged(e)}
             >
               <ScAudioTrack
@@ -130,7 +130,7 @@ export default class Teaser extends Component {
                   { src: `${SourcePath}สบาย สบาย.mp3`, type: "audio/mp3" },
                   { src: `${SourcePath}สบาย สบาย.ogg`, type: "audio/ogg" },
                 ]}
-                TrackBanner={`${process.env.ASSET_PATH}m_teaser/Egg Red CD.png`}
+                TrackBanner={`${process.env.ASSET_PATH}d_teaser/Egg Red CD.png`}
               ></ScAudioTrack>
              
               <ScAudioTrack
