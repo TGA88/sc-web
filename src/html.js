@@ -37,8 +37,8 @@ export default function HTML(props) {
  
 
         {props.headComponents}
-        <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
-        <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        {/* <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+        <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" /> */}
         <link rel="stylesheet" href={`${process.env.ASSET_PATH}plugins/bootstrap/bootstrap-grid.min.css`} />
 
 <style 
